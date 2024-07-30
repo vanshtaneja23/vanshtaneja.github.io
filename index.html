@@ -3,64 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
+    <title>Your Page Title</title>
     <style>
       body {
         margin: 0;
         padding: 0;
-        font-family: "Monaco", "Menlo", "Andale Mono";
+        background-image: url("f6fbe8bf-9be6-4b7e-853f-136dc6c841f2.jpg"); /* Replace with your photo URL */
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
         color: #fff;
+        height: 100vh;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        overflow: hidden;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
         position: relative;
       }
 
-      .background-img {
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Move content to the top-right */
         position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
+        right: 0;
+        margin: 10px; /* Adjust the margin as needed */
+        padding: 20px;
       }
 
-      p {
-        position: absolute;
-        top: 284px; /* Adjust this value to fit the text in the terminal box */
-        left: 450px; /* Adjust this value to fit the text in the terminal box */
-        width: 510px; /* Adjust this value to fit the text in the terminal box */
-        margin: 0;
-        color: black;
-        font-family: "Menlo";
-        font-size: 11px;
-        line-height: 1.5;
+      button.projects,
+      button.about,
+      button.contact {
+        margin: 8px;
+        border: none;
+        cursor: pointer;
+        transition: opacity 0.15s;
+        background-color: rgba(255, 255, 255, 0); /* Transparent white */
+        color: #fff;
+        border-radius: 2px;
+        height: 36px;
+        width: 105px;
+      }
+
+      .projects:hover,
+      .about:hover,
+      .contact:hover {
+        opacity: 0.7;
+      }
+
+      .projects:active,
+      .about:active,
+      .contact:active {
+        opacity: 0.3;
+      }
+
+      .name {
+        font-size: 55px;
+        margin-bottom: -20px;
+        font-family: optima;
+        color: rgb(73, 56, 56);
+        margin-right: -20px;
+      }
+
+      .name2 {
+        font-size: 14px;
+        color: rgb(96, 96, 96);
+        margin-bottom: 50px;
+      }
+
+      .quote {
+        color: rgb(90, 71, 2);
+        font-size: 45px;
+        margin-right: 800px;
+        margin-bottom: 200px;
+        padding: 20px;
+        font-family: optima;
       }
     </style>
   </head>
   <body>
-    <img src="aboutpage_photo.png" alt="Background" class="background-img" />
-    <p>
-      Hey there, I'm Vansh Taneja, a 20-year-old with a passion for technology
-      and a love for soccer. Currently navigating the exciting world of Computer
-      Science at the University of Alberta, I call the vibrant city of Amritsar,
-      Punjab, my hometown.
-      <br /><br />
-      As I dive into the complexities of algorithms and coding languages, I find
-      joy in the beautiful game of soccer, where every match is a new adventure.
-      On the field or behind the screen, the thrill of competition and
-      problem-solving keeps me on my toes.
-      <br /><br />
-      Join me on this journey through the world of code and soccer fandom. As I
-      strive for excellence in my studies, I also kick around the soccer ball
-      with enthusiasm and dedication. Let's connect, share ideas, and explore
-      the endless possibilities that both the digital and sports worlds offer.
-      <br /><br />
-      Welcome to my corner of the internet, where technology meets the passion
-      for play!
-    </p>
+    <div class="content">
+      <p class="name">VANSH <strong>TANEJA</strong></p>
+      <p class="name2">Programmer, 2nd year CS student (he/him)</p>
+      <a href="https://github.com/vanshtaneja23" class="projects-link"
+        ><button class="projects">PROJECTS</button></a
+      >
+      <a href="aboutpage.html" class="about-link"
+        ><button class="about">ABOUT</button></a
+      >
+      <a href="contactpage.html" class="contact-link"
+        ><button class="contact">CONTACT</button></a
+      >
+      <p class="quote">
+        “He who <strong>conquers</strong> himself is the mightiest warrior.” —
+        Confucius
+      </p>
+    </div>
   </body>
 </html>
