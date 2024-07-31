@@ -1,4 +1,4 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,49 +8,108 @@
       body {
         margin: 0;
         padding: 0;
-        background: url("aboutpage_photo.png")
-          no-repeat center center fixed;
-        background-size: cover;
         font-family: "Monaco", "Menlo", "Andale Mono";
-        color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
+        position: relative;
+        background-color: #000;
       }
 
-      p {
-        position: absolute;
-        top: 284px; /* Adjust this value to fit the text in the terminal box */
-        left: 450px; /* Adjust this value to fit the text in the terminal box */
-        width: 510px; /* Adjust this value to fit the text in the terminal box */
-        margin: 0;
+      .terminal {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        width: 70%;
+        max-width: 500px;
+        font-size: 10px;
+        line-height: 1.3;
         color: black;
-        font-family: "Menlo";
-        font-size: 11px;
-        line-height: 1.5;
+        position: relative;
+        margin: 20px;
+      }
+
+      .terminal-header {
+        display: flex;
+        align-items: center;
+        background: #e8e8e8;
+        padding: 5px 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        justify-content: center;
+        position: relative;
+      }
+
+      .terminal-header .buttons {
+        display: flex;
+        position: absolute;
+        left: 10px;
+      }
+
+      .terminal-header .buttons div {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+
+      .button-close {
+        background: #ff5f56;
+      }
+
+      .button-minimize {
+        background: #ffbd2e;
+      }
+
+      .button-zoom {
+        background: #27c93f;
+      }
+
+      .terminal-header img {
+        width: 20px;
+        height: 15px;
+        margin-left: 126px;
+        position: absolute;
+        left: 26px; /* Adjust this value as needed */
+      }
+
+      .terminal-content {
+        padding: 5px;
       }
     </style>
   </head>
   <body>
-    <p>
-      Hey there, I'm Vansh Taneja, a 20-year-old with a passion for technology
-      and a love for soccer. Currently navigating the exciting world of Computer
-      Science at the University of Alberta, I call the vibrant city of Amritsar,
-      Punjab, my hometown.
-      <br /><br />
-      As I dive into the complexities of algorithms and coding languages, I find
-      joy in the beautiful game of soccer, where every match is a new adventure.
-      On the field or behind the screen, the thrill of competition and
-      problem-solving keeps me on my toes.
-      <br /><br />
-      Join me on this journey through the world of code and soccer fandom. As I
-      strive for excellence in my studies, I also kick around the soccer ball
-      with enthusiasm and dedication. Let's connect, share ideas, and explore
-      the endless possibilities that both the digital and sports worlds offer.
-      <br /><br />
-      Welcome to my corner of the internet, where technology meets the passion
-      for play!
-    </p>
+    <img src="background_image.png" alt="Background Image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;" />
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="buttons">
+          <div class="button-close"></div>
+          <div class="button-minimize"></div>
+          <div class="button-zoom"></div>
+        </div>
+        <img src="folder_icon.png" alt="Folder Icon" />
+        <img src="folder_icon.png" alt="Folder Icon" style="width: 1%; height: 0.5%;" />
+        <div style="flex-grow: 1; text-align: center;">vanshtaneja — -zsh — 80x24</div>
+      </div>
+      <div class="terminal-content">
+        <p>
+          Last login: Tue Jul 30 11:06:18 on ttys002<br>
+          vanshtaneja@Vanshs-MacBook-Air ~ % pip3 install about_me
+        </p>
+        <p>
+          Hey there, I'm Vansh Taneja, a 20-year-old with a passion for technology and a love for soccer. 
+          Currently navigating the exciting world of Computer Science at the University of Alberta, I call the vibrant city of Amritsar, Punjab, my hometown.
+          <br><br>
+          As I dive into the complexities of algorithms and coding languages, I find joy in the beautiful game of soccer, where every match is a new adventure.
+          On the field or behind the screen, the thrill of competition and problem-solving keeps me on my toes.
+          <br><br>
+          Join me on this journey through the world of code and soccer fandom. As I strive for excellence in my studies, I also kick around the soccer ball with enthusiasm and dedication.
+          Let's connect, share ideas, and explore the endless possibilities that both the digital and sports worlds offer.
+          <br><br>
+          Welcome to my corner of the internet, where technology meets the passion for play!
+        </p>
+      </div>
+    </div>
   </body>
 </html>
